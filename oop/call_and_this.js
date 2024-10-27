@@ -1,7 +1,7 @@
 function setusername(username)
 {
     this.username=username;
-    console.log("setusername called")
+    //console.log("setusername called")
 }
 
 function user(username,password,email)
@@ -13,7 +13,7 @@ function user(username,password,email)
 
 }
 let user1=new user("jyotijain",4534,"jyoijain@gmail.com")
-console.log(user1);
+//console.log(user1);
 
 //here we can see we are calling function inside a function and that function is setting here user name but on printing user1 it is not showing username because username is not set by the functon setusername because here in call stack the setusername is on top so it is called then popped out from the call stack so we cannot hold on the values as setuserame execution context is removed from the call stack that's the setusername is called so in console we saw printing setusername called but it is not setting username 
 
