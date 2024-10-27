@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Api_request & v8 engine</title>
+</head>
+<body>
+    <div id="image">
+     
+    </div>
+</body>
+<script>
+    let xhr=new XMLHttpRequest();
+    console.log(xhr.readyState);
+    xhr.open('GET',"https://api.github.com/users/hiteshchoudhary",)
+    xhr.onreadystatechange=function(){
+        console.log(xhr.readyState) //it continuously monitor the state change
+        if(xhr.readyState === 4)
+        {
+            const data=JSON.parse(this.responseText);
+            console.log(typeof data); //string so can't use . to extract the info;
+            //so here first we will change the type of data to JSON;
+           console.log(data.followers);
+           console.log(data)
+        const avatar=data.avatar_url;
+  let image=document.querySelector('#image');
+  image.innerHTML=`<img src=${avatar}>`
+     
+
+        }
+    }
+xhr.send()
+</script>
+</html>

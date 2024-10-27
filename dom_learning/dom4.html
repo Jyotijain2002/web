@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul class="my_list">
+
+    </ul>
+</body>
+<script>
+    // function create_language(lang_name)
+    // {                                                       yaha par pura tree bar bar traverse karna par raha he which have high time
+    //     let list=document.createElement('li');
+    //     list.innerHTML=`${lang_name}`;    innerHTML traverse pura tree whenever it is called
+    //    document.querySelector('.my_list').appendChild(list);
+    // }
+
+
+    function create_optimal_language(lang_name)
+    {
+        const li=document.createElement('li');
+        li.appendChild(document.createTextNode(lang_name));
+        document.querySelector('.my_list').appendChild(li);
+    }
+    create_optimal_language("javascript")
+    create_optimal_language("java")
+    create_optimal_language("cpp")
+    create_optimal_language("python")
+    
+
+    //editing 
+    let secondlist_item=document.querySelector('li:nth-child(2)');
+   // secondlist_item.innerHTML="typescript";   one way to edit;
+    let newcontent=document.createElement('li');
+    newcontent.textContent="jai_jawan_jai_kisan";
+    secondlist_item.replaceWith(newcontent) //another_way_to_edit, it replaces the secondlist with newcontent here
+    let first_lang=document.querySelector('li:nth-child(1)');
+    let newli=document.createElement('li');
+    newli.textContent="typescript";
+    first_lang.replaceWith(newli);
+  
+    let third_lang=document.querySelector('li:nth-child(3)');
+   third_lang.outerHTML="<li>Javascript_devi</li>"   //outerHTML
+
+
+
+
+   //remove
+   //lets remove python
+   let last_lang=document.querySelector('li:last-child');
+   last_lang.remove();
+    
+
+</script>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    fetch("https://api.github.com/users/hiteshchoudhary")
+    .then(response => {
+        // Check if the response is OK (status code 200-299)
+        if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        return response.json();
+    })
+    .then(data => {
+        // Successfully fetched the data
+        console.log(data);
+        console.log(data.followers)
+        console.log(data.name);
+        console.log(data.login);
+        console.log(data.bio);
+    })
+    .catch(error => {
+        // Error handling
+        console.log("Fetch error:", error);
+    });
+</script>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>project-5</title>
+    <style>
+        body{
+            background-color: black;
+            color: white;
+        }
+        #key{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="input">
+    <div id="key">Press the key and see the magic</div>
+    </div>
+</body>
+<script>
+    let input=document.querySelector('#input');
+    window.addEventListener('keydown',function(e)
+{
+    input.innerHTML=`<div id='color'><table>
+  <tr>
+    <th>key</th>
+    <th>keycode</th>
+    <th>code</th>
+  </tr>
+  <tr>
+    <td>${e.key==" "?"space":e.key}</td>
+    <td>${e.keyCode}</td>
+    <td>${e.code}</td>
+</tr></div>`
+})
+</script>
+</html>

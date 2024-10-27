@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>async-1</title>
+</head>
+
+<body>
+    <h1 id="title">js tutorial</h1>
+    <button id="stop">stop</button>
+</body>
+<script>
+    let title = document.querySelector('#title');
+    function change_text() {
+        title.innerHTML = "hitesh_choudhary_tutorial";
+        console.log("text changed");
+    }
+    let change_me=setTimeout(change_text,5000);
+
+    document.querySelector("#stop").addEventListener('click',function()
+{
+    console.log("stop clicked");
+     clearTimeout(change_me);
+})
+
+
+
+</script>
+
+</html>

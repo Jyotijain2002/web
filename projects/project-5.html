@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>project-5</title>
+</head>
+<body>
+    <h1>hitesh choudhary AKA chai aur code tutorial</h1>
+    <button id="start">start</button>
+    <button id="stop">stop</button>
+</body>
+<script>
+let start=document.querySelector('#start');
+let stop=document.querySelector('#stop');
+let change_color;
+
+function random_color()
+{
+    let hex='0123456789ABCDEF';
+    let color='#';
+    for(let i=0; i<6; i++)
+{
+    color+=hex[Math.floor(Math.random()*16)]
+}
+return color;
+}
+start.addEventListener('click',function()
+{    if(!change_color){   //better code practice
+    change_color = setInterval(function(){
+        document.body.style.backgroundColor=random_color();
+    },1000)
+}
+})
+stop.addEventListener('click',function()
+{
+    clearInterval(change_color);
+    change_color=null;
+})
+</script>
+</html>

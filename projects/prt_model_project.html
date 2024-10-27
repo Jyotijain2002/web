@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>prt_model</title>
+    <style>
+        body
+        {
+            background-color: black;
+            color:white;
+        }
+        #calculate
+        {
+            display: block;
+            margin: auto;
+        }
+        input{
+            text-align: center;
+        }
+        .container
+        {
+         display: flex;
+         justify-content: center;
+         }
+        
+         
+        
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+    <form id="form">
+        <p><lable>Amount:</lable>
+        <input type="text" id="amt"></p>
+
+        <p>
+        <lable>Rate(in percent): </lable>
+        <input type="text" id="rate">
+        </p>
+
+        <p>
+            <label>Time(in years): </label>
+            <input type="text" id="time">
+        </p>
+
+        <button id="calculate">calculate</button>
+        <p>
+            <label>Total Amount: </label>
+            <input type="text" id="total">
+        </p>
+    </form></div>
+</body>
+<script src="prt.js"></script>
+</html>

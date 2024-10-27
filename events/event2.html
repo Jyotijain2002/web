@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>event-2</title>
+    <style>
+        img {
+            width: 100px;
+            height: 100px;
+        }
+    </style>
+</head>
+<body>
+    <ul class="unorderd_list">
+        <li class="list"><img src="https://www.thewowstyle.com/wp-content/uploads/2015/01/images-of-nature-4.jpg"
+                id="img1"></li>
+        <li class="list"><img src="https://jooinn.com/images/lonely-tree-reflection-3.jpg" id="img2"></li>
+        <li class="list"><img
+                src="https://images.pexels.com/photos/459225/pexels-photo-459225.jpeg?cs=srgb&dl=daylight-environment-forest-459225.jpg&fm=jpg"
+                id="img3"></li>
+        <li class="list"><img src="https://images.wondershare.com/filmora/article-images/pixabay-image.jpg" id="img4">
+        </li>
+        <li class="list"><img src="https://cdn.pixabay.com/photo/2017/07/13/19/51/sunset-2501727_960_720.png" id="img5">
+        </li>
+    </ul>
+</body>
+<script>
+    document.querySelector('.unorderd_list').addEventListener('click',function(e)
+{
+    if(e.target.tagName=='IMG')
+    {
+    let parent_node=e.target.parentNode;
+    parent_node.remove();
+}
+// console.log(e.target.parentNode.tagName);
+
+})
+</script>
+</html>

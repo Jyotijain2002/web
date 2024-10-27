@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM_learning</title>
+</head>
+<body>
+    
+</body>
+<script>
+// let div=document.createElement('div');
+// console.log(div)
+// div.className="div_devi";
+// div.id=Math.round(Math.random()+1);
+// div.setAttribute("title","div_created_by_me");
+// div.style.backgroundColor="yellow";
+// div.style.color="green";
+// div.innerText="hello,I am a div";
+// div.style.fontSize="42px";
+
+// const addtext=document.createTextNode("la la lalalala");
+// div.appendChild(addtext);
+// document.body.append(div);
+let main_div=document.createElement('div')
+function create_new_div()
+{
+   let _childdiv=document.createElement('div');
+   _childdiv.style.height="200px";
+   _childdiv.style.width="200px";
+   _childdiv.style.backgroundColor="green"
+   _childdiv.style.color="yellow"
+   main_div.append(_childdiv)
+}
+for (let i = 0; i < 5; i++) {
+   create_new_div()
+}
+document.body.append(main_div)
+main_div.style.display="flex"
+main_div.style.columnGap="10px";
+
+
+
+</script>
+</html>

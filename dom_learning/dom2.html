@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="parent">
+        <div class="day">sunday</div>
+        <div class="day">monday</div>
+        <div class="day">tuesday</div>
+        <div class="day">wednesday</div>
+    </div>
+</body>
+<script>
+    const parent=document.querySelector('.parent')
+    // console.log(parent);
+    // console.log(parent.children);
+    // console.log(parent.children[0])
+
+    for (let i = 0; i < parent.children.length; i++) {
+       console.log(parent.children[i].innerHTML)
+    }
+   parent.children[0].style.color="orange";
+   parent.children[1].style.color="white";
+   parent.children[2].style.color="green";
+   parent.children[3].style.color="blue";
+   document.querySelector('body').style.backgroundColor="black";
+   parent.firstElementChild.style.backgroundColor="yellow";
+   parent.lastElementChild.style.backgroundColor="yellow";
+   console.log(parent.firstElementChild.textContent)
+   console.log(parent.lastElementChild.textContent)
+
+   let dayone=document.querySelector('.day')
+   console.log(dayone)
+   console.log(dayone.parentElement) //parent
+   console.log(dayone.parentNode)  //parent
+   console.log(dayone.nextElementSibling) //monday
+   dayone.parentElement.style.backgroundColor="brown";
+   console.log("nodes :",parent.childNodes) // this includes line-break(only one line-break is considered and nodes)
+
+
+
+
+
+
+
+    
+</script>
+</html>
