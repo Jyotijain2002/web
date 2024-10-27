@@ -23,3 +23,26 @@ console.log(user1);
 //let undersatnd it
 // bacuse hume pata he ki jo setusername function he uska context from call stack will be popped out to humne jo function isse call kar raha he uska current context de diya he ...  sqamjh gaye
 //call kahta he ki bhai me to is duniya se ja raha hu but mere saaman aap rakh lo
+
+
+
+//an amazing example 
+function setpassword(password)
+{
+    this.password=password;
+    console.log("setpassword called")
+}
+function setage(age,password)
+{
+    setpassword.call(this,password);
+    this.age=age;
+    console.log("setage called")
+}
+function setdetails(name,age,password)
+{
+    setage.call(this,age,password);
+    this.name=name; 
+    console.log("setdetails called");
+}
+let client=new setdetails("jyoti jain",21,"Jj2002");
+console.log(client)
