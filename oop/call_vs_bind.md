@@ -20,7 +20,7 @@ greet.call(person, "Hello"); // Outputs: "Hello, John"
 Does not invoke the function immediately.
 
 Returns a new function with the specified this context and optional arguments.</p>
-<code>
+```
 function greet(greeting) {
     console.log(`${greeting}, ${this.name}`);
 }
@@ -28,7 +28,7 @@ function greet(greeting) {
 const person = { name: "John" };
 const boundGreet = greet.bind(person);
 boundGreet("Hi"); // Outputs: "Hi, John"
-</code>
+```
 <p>
 bind:
 
@@ -37,7 +37,7 @@ Does not invoke the function immediately.
 Returns a new function with the specified this context and optional arguments.
 </p>
 
-<code>
+```
 function greet(greeting) {
     console.log(`${greeting}, ${this.name}`);
 }
@@ -46,7 +46,7 @@ const person = { name: "John" };
 const boundGreet = greet.bind(person);
 boundGreet("Hi"); // Outputs: "Hi, John"
 
-</code>
+```
 
 <p>
 call executes the function immediately with a specific this context.
