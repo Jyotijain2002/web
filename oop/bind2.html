@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React</title>
+</head>
+<body>
+    <button>Button Clicked</button>
+</body>
+<script>
+    class React {
+        constructor(){
+            this.library = "React"
+            this.server = "https://localhost:300"
+
+            //requirement
+            document
+                .querySelector('button')
+                .addEventListener('click', this.handleClick.bind(this)) // here we bind the context of react class with handleclick function
+
+        }
+        handleClick(){
+            console.log("button clicked");
+            console.log(this.server);
+        }
+    }
+
+    const app = new React()
+
+
+//     In your example, this.handleClick.bind(this) is crucial for ensuring that the this context inside the handleClick method refers to the instance of your React class.
+
+// When you use .bind(this), you explicitly bind the context of this to the instance of the React class. Here’s what’s happening:
+
+// When the button is clicked, the handleClick method is called.
+
+// By binding this in the constructor, you ensure that this inside the handleClick method refers to the instance of the React class, allowing it to access this.server.
+
+// If you don't use .bind(this), here’s what would happen:
+
+// You attach the event listener to the button.
+
+// When the button is clicked, the handleClick method is called, but this inside handleClick will refer to the button element, not your React class instance.
+
+// This means this.server will be undefined, because the button element doesn't have a server property.
+
+
+
+
+
+
+
+
+
+
+</script>
+</html>
